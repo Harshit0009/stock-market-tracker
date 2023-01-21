@@ -1,0 +1,11 @@
+{
+  "name": "stock-market",
+  "version": "1.0.0",
+  "description": "It fetches the real time stock market data using the api, displays the user's stock prices fluctuations and calculates the loss and profit and notifies for selling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harshit, Harshul Choudhary, Harshul Nawani, Hritik",
+  "license": "ISC"
+}
