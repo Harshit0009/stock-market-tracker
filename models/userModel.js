@@ -2,6 +2,8 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
+const stock = require('./stockModel');
+
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -33,6 +35,12 @@ const userSchema = new mongoose.Schema({
       message: 'Passwords does not match',
     },
   },
+  stocks: [
+    {
+        type: mongoose.Schema.ObjectId,
+        ref: 'stock'    
+    }
+    ]
 });
 
 userSchema.methods.correctPassword = async function (
