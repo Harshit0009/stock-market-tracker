@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Market Cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data.forEach(function(crypto) { %>
+    <tr>
+      <td><%= crypto.name %></td>
+      <td>$<%= crypto.quote.USD.price %></td>
+      <td>$<%= crypto.quote.USD.market_cap %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
