@@ -4,17 +4,19 @@ dotenv.config({ path: './config.env' });
 
 const app = require('./app');
 
-
-const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD
+);
 
 // .connect(process.env.DATABASE_LOCAL, {
-
+mongoose.set('strictQuery', true);
 mongoose
-    .connect(DB, {
+  .connect(DB, {
     useNewUrlParser: true,
-    useCreateIndex: true,
+    // useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
+    // useFindAndModify: false,
   })
   .then((con) => {
     // console.log(con.connection);
