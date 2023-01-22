@@ -1,4 +1,5 @@
 var axios = require('axios').default;
+const arrTicker = ['CSCO', 'AAPL', 'GOOG', 'AMZN', 'MSFT', 'TSLA'];
 var options = {
   method: 'GET',
   url: 'http://api.marketstack.com/v1/intraday?access_key=0532b508f9f5278a5944a0942066308e&symbols=INFY',
