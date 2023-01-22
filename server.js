@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const cors = require('cors');
+const fs = require('fs');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
@@ -22,6 +24,21 @@ mongoose
     // console.log(con.connection);
     console.log('DB connection successful ...');
   });
+
+const data = JSON.parse(fs.readFileSync(`stockdata.json`));
+console.log();
+
+const getThisStock = (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: { data },
+  });
+};
+
+// app.get('./stockdata', getThisStock);
+// app.get('/message', (req, res) => {
+//   res.json({ message: 'hello' });
+// });
 
 const port = 3000 || process.env.PORT;
 
