@@ -31,7 +31,9 @@ class DataComponent extends Component {
     const result = this.state.data;
     const finalres = {};
     for (let i = 0; i < result.length; i++) {
-      Object.assign(finalres, result[i]);
+      if (i === Math.ceil(Math.random() * 100)) {
+        Object.assign(finalres, result[i]);
+      }
     }
     // console.log(result);
     // const output = JSON.stringify(result);
