@@ -7,7 +7,7 @@ const stockdata = require('node-stock-data');
 const arrTicker = ['CSCO', 'AAPL', 'GOOG', 'AMZN', 'MSFT', 'TSLA'];
 var options = {
   method: 'GET',
-  url: 'http://api.marketstack.com/v1/intraday?access_key=128f095c0774d10197f864bdb4253645&symbols=CSCO&limit=1',
+  url: 'http://api.marketstack.com/v1/intraday?access_key=128f095c0774d10197f864bdb4253645&symbols=AAPL&limit=1',
   // params: { Indices: 'NIFTY 50' },
   // headers: {
   //   'x-rapidapi-host': 'latest-stock-price.p.rapidapi.com',

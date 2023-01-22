@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { useState } from 'react';
 class DataComponent extends Component {
   state = {
@@ -34,13 +35,20 @@ class DataComponent extends Component {
     }
     // console.log(result);
     // const output = JSON.stringify(result);
-    const { open, high, low, symbol } = finalres;
+    const { open, high, low, date, symbol, exchange } = finalres;
     return (
-      <div>
-        <h1>The market price of share: {symbol}</h1>
-        <p>open: {open}</p>
-        <p>high: {high}</p>
-        <p>low: {low}</p>
+      <div className="one-stock">
+        <h1 className="heading">
+          <span id="">The market price of share: {symbol}</span>
+        </h1>
+        <div className="stock-data">
+          <p>open: ${open}</p>
+          <p>high: ${high}</p>
+          <p>low: ${low}</p>
+          <p>date: {date}</p>
+          <p>exchange: {exchange}</p>
+        </div>
+
         {/* <p>{finalres}</p> */}
       </div>
     );
