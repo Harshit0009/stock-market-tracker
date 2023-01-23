@@ -13,14 +13,14 @@
       <li> A get request is created from backend which sends the data to the frontend</li>
       <li> The data is fetched by react and then it is displayed on a static webpage which is responsive but only displays the data and has no post method in it. Whenever we load the page, it displays data of some another day.</li>
       <li> We have also created backend connectivity for login system. The login system can be tested using "Postman" by sending API on it. <b> Address -: /api/v1/users/signup for signup and /api/v1/users/login for login. <ul type = "disc">
-        <li> signup model:= <p> { name, email, password, passwordConfirm } </p> </li>
-        <li> login model:= <p> { email, password } </p> </li>
-        MongoDB is implemented as Backend </ul></li>        
+        <li> signup model:= { name, email, password, passwordConfirm } </li>
+        <li> login model:= { email, password }  </li> </ul> </li> 
+       <li> MongoDB is implemented as Backend </li>         
       <li> The webpage for login/signup is yet to be created </li></ul>
-    
+      <hr>    
     <h3> Execution </h3>
-        <p> Run "npm start" for app.js<p>
-        <p> Run "npm start" for index.js in frontend folder for starting react.
+        <p> Run "npm start" for app.js</p>
+        <p> Run "npm start" for index.js in frontend folder for starting react. </p>
           <p> For re-writing the stock data to backend file run - "node index.js" in root directory. <b>NOTE</b> - Only 100 requests can be made to the API and 25 were only made at the time of submission. </p>
   
   
